@@ -1,0 +1,179 @@
+/* You can add your custom styles here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by most modern browsers */
+  overflow: hidden;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+ 
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+  main {
+    
+    position: absolute; 
+    margin: 0px auto;
+    padding: 17% 14%;
+    max-width: 1000px;
+    display: flow; 
+    -webkit-box-pack: center;
+    justify-content: center; 
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    
+  }
+
+  pre.mobile{
+    display: none;
+  }
+
+pre {
+  display: table-header-group;
+  color: transparent;
+  background-image: linear-gradient(45deg, #00ffa5, #ff7700);
+  font-family: monospace, -webkit-pictograph; 
+  font-size: 12px;
+  -webkit-background-clip: text;
+  margin-bottom: 0;
+}
+
+.transparent-char {
+  opacity: 0; /* Set the opacity for the ░ character */
+}
+
+pre.firt {
+  font-size: 5px;
+}
+
+
+a {
+  margin: 15px;
+  left: 40%;
+  position: absolute;
+}
+ 
+h4 {
+  color: rgb(219, 217, 217);
+}
+
+h4 span{
+
+    white-space: nowrap; /* Prevent text from wrapping onto next line */
+  background-clip: text; 
+  color: transparent;
+  font-size: 15px;
+  background-image: linear-gradient(45deg, #00ffa5, #ff7700);
+  -webkit-background-clip: text;
+}
+
+h4 span::before {
+  content: "";
+  right: -8px;
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  background-image: linear-gradient(45deg, #00ffa5, #ff7700);
+  transform: translateY(5%);
+  animation: blink 0.7s infinite;
+}
+
+h4 span.stop-blink::before {
+  animation: none;
+}
+
+h4 a.stop-blink {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+  ::-webkit-scrollbar {
+    /* width */
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    /* Track */
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    /* Handle */
+     background: linear-gradient(196deg, #ffd43f 30%, #00ff8f 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* Handle on hover */
+     background: linear-gradient(196deg, #ffd43f 30%, #00ff8f 100%);
+}
+
+::-webkit-scrollbar-track-piece {
+    /* not handle on */
+    background: rgb(1, 1, 1);
+}
+
+ 
+                         @media (max-width: 767px) {
+    h4 span {
+        font-size: 20px; /* Font size for mobile phones */
+    }
+}
+
+
+@media (max-width: 48em) {
+ pre.windows {
+display: none;
+  }
+  pre.mobile{
+    display: flow;
+  }
+  main {
+      padding: 85% 10px;
+  }
+  pre {
+    font-size: 8px; /* Font size for mobile devices */
+}
+pre.firt {
+  font-size: 3px; /* Font size for mobile devices */
+}
+a {
+  left: 20%;
+}
+h4 span{
+  font-size: 12px;
+  white-space: normal;
+}
+}
